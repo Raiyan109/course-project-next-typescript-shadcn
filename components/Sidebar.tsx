@@ -1,33 +1,100 @@
 import Link from "next/link"
+import teacher from '@/public/images/teacher-image.png'
+import education from '@/public/images/Education.png'
+import online from '@/public/images/Group.png'
+import students from '@/public/images/Education(1).png'
+import attendance from '@/public/images/Group(1).png'
+import exam from '@/public/images/Exam.png'
+import notification from '@/public/images/Vector.png'
+import profile from '@/public/images/User.png'
+import setting from '@/public/images/Gear.png'
+import signout from '@/public/images/Frame.png'
+import Image from 'next/image'
 
 export const Sidebar = () => {
+    const links = [
+        {
+            name: 'Karate Course',
+            icon: education
+        },
+        {
+            name: 'Online Karate Courses',
+            icon: online
+        },
+        {
+            name: 'Students',
+            icon: students
+        },
+        {
+            name: 'Attendance',
+            icon: attendance
+        },
+        {
+            name: 'Exam',
+            icon: exam
+        },
+    ]
+    const bottomLinks = [
+        {
+            name: 'Notification',
+            icon: notification
+        },
+        {
+            name: 'My Profile',
+            icon: profile
+        },
+        {
+            name: 'Setting',
+            icon: setting
+        },
+        {
+            name: 'Sign out',
+            icon: signout
+        }
+    ]
     return (
         <div>
             {/* w-14 hover:w-64 md:w-64 transition-all duration-300 h-full */}
-            <div className="fixed flex flex-col top-48 left-10 h-[700px] w-64 bg-white text-black border-none rounded-3xl z-10 sidebar">
-                <div className="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
+            <div className="fixed flex flex-col top-48 left-10 h-[730px] w-64 bg-white text-black border-none rounded-3xl z-10 sidebar">
+                <div className="overflow-y-hidden overflow-x-hidden flex flex-col justify-between flex-grow">
+
                     <ul className="flex flex-col py-4 space-y-1">
-                        <li className="px-5 hidden md:block">
-                            <div className="flex flex-row items-center h-8">
-                                <div className="text-sm font-light tracking-wide text-gray-400 uppercase">Main</div>
-                            </div>
+                        <li className="px-5 flex items-center justify-center">
+                            <Image src={teacher} height={150} width={150} alt='logo' />
                         </li>
-                        <li>
-                            <Link href='add' className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
-                                <span className="inline-flex justify-center items-center ml-4">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                                </span>
-                                <span className="ml-2 text-sm tracking-wide truncate">Add Product</span>
-                            </Link>
+                        <li className="px-5 flex items-center justify-center pt-4">
+                            <h1 className="text-xl font-medium">Adil Rashid</h1>
                         </li>
-                        <li>
-                            <Link href='myProduct' className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
-                                <span className="inline-flex justify-center items-center ml-4">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                                </span>
-                                <span className="ml-2 text-sm tracking-wide truncate">My Products</span>
-                            </Link>
+                        <li className="px-5 flex items-center justify-center pt-4">
+                            <h1 className="text-sm text-gray-400">Sr. Karate Teacher</h1>
                         </li>
+                        <div className="space-y-1 pb-5">
+                            {links.map((link) => (
+                                <li>
+                                    <Link href='add' className="relative flex flex-row items-center h-11 focus:outline-none 
+                            bg-[#E9E9EF]
+                            hover:bg-[#26235B]  hover:text-white  border-l-4 border-transparent hover:border-blue-500  pr-6">
+                                        <span className="inline-flex justify-center items-center ml-4">
+                                            <Image src={link.icon} height={15} width={15} alt='icons' />
+                                        </span>
+                                        <span className="ml-2 text-sm tracking-wide truncate">{link.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </div>
+                        {bottomLinks.map((link) => (
+                            <li className="">
+                                <Link href='add' className="relative flex flex-row items-center h-11 focus:outline-none 
+                            bg-[#E9E9EF]
+                            hover:bg-[#26235B]  hover:text-white  border-l-4 border-transparent hover:border-blue-500  pr-6">
+                                    <span className="inline-flex justify-center items-center ml-4">
+                                        <Image src={link.icon} height={15} width={15} alt='icons' />
+                                    </span>
+                                    <span className="ml-2 text-sm tracking-wide truncate">{link.name}</span>
+                                </Link>
+                            </li>
+                        ))}
+
 
                     </ul>
                     <p className="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2021</p>
