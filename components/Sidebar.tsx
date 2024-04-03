@@ -30,7 +30,7 @@ export const Sidebar = () => {
             icon: attendance
         },
         {
-            name: 'Exam',
+            name: 'Exam & Grading',
             icon: exam
         },
     ]
