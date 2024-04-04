@@ -8,7 +8,9 @@ export default function Home() {
       <div className="absolute top-48 left-[400px]">
         <h1 className="text-4xl font-semibold uppercase text-[#26235B]">Exam & Grading</h1>
         <Steps />
-        <Filters />
+        <div className="">
+          <Filters />
+        </div>
       </div>
     </main>
   );
