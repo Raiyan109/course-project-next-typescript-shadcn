@@ -17,7 +17,7 @@ type Props = {}
 
 const MarkingTable = (props: Props) => {
     return (
-        <div className="rounded-3xl border border-[#f1efef] bg-white">
+        <div className="rounded-3xl border border-[#f1efef] bg-white h-[400px]">
             <Table className="flex-1  rounded-3xl">
 
                 <TableHeader>

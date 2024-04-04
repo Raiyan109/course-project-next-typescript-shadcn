@@ -15,7 +15,7 @@ type Props = {}
 const ExamsTable = (props: Props) => {
     return (
         <div>
-            <Table>
+            <Table className="border border-[#f1efef]">
                 {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
                 <TableHeader>
                     <TableRow>
