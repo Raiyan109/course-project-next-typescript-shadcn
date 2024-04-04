@@ -25,7 +25,7 @@ const ExamsTable = (props: Props) => {
                         <TableHead>Date</TableHead>
                         <TableHead>Start time</TableHead>
                         <TableHead>End time</TableHead>
-                        <TableHead className="text-right">Teacher Confirmation</TableHead>
+                        <TableHead className="text-center">Teacher Confirmation</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
