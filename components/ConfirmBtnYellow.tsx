@@ -1,10 +1,14 @@
-import React from 'react'
+import { Button } from '@/components/ui/button';
 
-type Props = {}
+type StyledButtonProps = React.ComponentProps<typeof Button>
 
-const ConfirmBtnYellow = (props: Props) => {
+const ConfirmBtnYellow = ({ ...props }: StyledButtonProps) => {
     return (
-        <div>ConfirmBtnYellow</div>
+        <div>
+            <Button size={'lg'} className='bg-[#FFB606] text-[#26235B]'>
+                Confirm
+            </Button>
+        </div>
     )
 }
 

@@ -9,6 +9,8 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import MarkInput from "./MarkInput"
+import ConfirmBtnYellow from "./ConfirmBtnYellow"
+import AllResultBtn from "./AllResultBtn"
 
 
 type Props = {}
@@ -35,7 +37,7 @@ const MarkingTable = (props: Props) => {
                             <MarkInput />
                         </TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow style={{ borderBottom: '1px solid #e5e7eb' }}>
                         <TableCell>2</TableCell>
                         <TableCell>Practical Video</TableCell>
                         <TableCell className="text-center">50</TableCell>
@@ -46,11 +48,14 @@ const MarkingTable = (props: Props) => {
 
                 </TableBody>
             </Table>
-            <div className="py-5 flex justify-end mr-5">
-                <h1 className="text-lg font-normal">Total marks out of 100 is: <span className="text-green-700">70</span>  </h1>
+            <div className="py-5 flex justify-end mr-8">
+                <div className="flex flex-col gap-8">
+                    <h1 className="text-lg font-normal mr-5">Total marks out of 100 is: <span className="text-green-700">70</span>  </h1>
 
-                <div>
-
+                    <div className="flex items-center gap-6 ml-9">
+                        <ConfirmBtnYellow />
+                        <AllResultBtn />
+                    </div>
                 </div>
             </div>
         </div>
